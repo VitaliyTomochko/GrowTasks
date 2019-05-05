@@ -6,8 +6,7 @@ public abstract class KitchenAppliance extends ElectricDevice {
         super(name, powerConsumption, status);
     }
 
-    public KitchenAppliance() {
-    }
+
 
     @Override
     void connectToNetwork() {

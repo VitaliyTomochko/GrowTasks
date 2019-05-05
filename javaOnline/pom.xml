@@ -21,6 +21,7 @@
         <module>Menu</module>
         <module>StoneMarket</module>
         <module>ElectricalAppliances</module>
+        <module>AirCompany</module>
 
     </modules>
 

@@ -7,9 +7,6 @@ public class ElectricDevice extends NetworkAppliance {
     private int powerConsumption;
     private boolean status;
 
-    public ElectricDevice() {
-
-    }
 
     public ElectricDevice(String name, int powerConsumption, boolean status) {
         this.name = name;

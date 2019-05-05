@@ -1,3 +1,5 @@
+package com.vtom.seatransportation;
+
 public class Voyage {
     private String from;
     private String to;

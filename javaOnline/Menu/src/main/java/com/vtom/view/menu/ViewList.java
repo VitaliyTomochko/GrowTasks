@@ -1,6 +1,10 @@
 package com.vtom.view.menu;
 
 
+import com.vtom.ElectricDevice;
+import com.vtom.view.gameroom.Main;
+import com.vtom.view.hypermarket.Hypermarket;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -13,14 +17,16 @@ public class ViewList {
 
     static {
 
-        views.put("Gameroom", com.vtom.view.gameroom.Main::main);
-        views.put("Hypermarket", com.vtom.view.hypermarket.Hypermarket::main);
+        views.put("Gameroom", Main::main);
+        views.put("Hypermarket", Hypermarket::main);
+        views.put("StoneMarket", Hypermarket::main);
+        views.put("ElectricalAppliances", Hypermarket::main);
     }
 
 
     public static void main(String[] args) {
         while (true) {
-            System.out.println("Choose project:");
+            System.out.println("Choose project(Enter name):");
 
             for (Map.Entry<String, Consumer<String[]>> elem : views.entrySet()) {
                 System.out.println(elem.getKey());

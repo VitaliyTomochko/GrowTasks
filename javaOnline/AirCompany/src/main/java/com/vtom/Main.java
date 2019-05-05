@@ -3,12 +3,10 @@ package com.vtom;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        ElectricDeviceManager manager = new ElectricDeviceManager();
 
-
-        manager.createDevices();
+        PlaneGenerator planeGenerator = new PlaneGenerator();
+        PlaneController planeController = new PlaneController(planeGenerator.getPlanes());
 
 
         boolean exit = true;
@@ -16,17 +14,17 @@ public class Main {
 
             switch (new Scanner(System.in).nextInt()) {
                 case 1:
-                    manager.showAllData();
+                    planeController.showPlanes();
                     break;
                 case 2:
-                    manager.sortByPower();
+                    System.out.println("enter fuel capacity: ");
+                    planeController.findByFuelLessThan(new Scanner(System.in).nextInt());
                     break;
                 case 3:
-                    manager.showOnlyTurnOn();
+                    planeController.sortByLoadCapacity();
                     break;
                 case 4:
-                    System.out.println("Choose device");
-                    manager.plugIn(new Scanner(System.in).nextLine());
+                    planeController.sortByDistance();
                     break;
                 case 5:
                     exit = false;
@@ -36,6 +34,7 @@ public class Main {
             }
 
         } while (exit);
+
 
     }
 }

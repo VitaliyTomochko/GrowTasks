@@ -14,6 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
+
         System.out.print("Enter the amount of money:");
         moneyAmount = Double.parseDouble(scanner.nextLine());
 
@@ -42,15 +43,10 @@ public class Main {
                     System.out.println(menu.printResult());
                     break;
                 case 4:
-
                     tc.searchByKind(scanner.nextLine());
-
                     break;
-
                 case 5:
-
                     tc.searchBySize(scanner.nextLine());
-
                     break;
                 case 6:
                     System.exit(0);

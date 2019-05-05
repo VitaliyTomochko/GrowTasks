@@ -1,8 +1,8 @@
 package com.vtom.view.hypermarket;
 
 import com.vtom.view.hypermarket.Plumbings.ShowerCabin;
-import com.vtom.view.hypermarket.Plumbings.Sink;
 import com.vtom.view.hypermarket.WoodProducts.Door;
+import com.vtom.view.hypermarket.Plumbings.Sink;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,8 +16,8 @@ public class Hypermarket{
 
     public static void main(String[] args) {
 
+
         List<List<? extends Category>> goods = initMarket();
-        //print goods
         for (List<? extends Category> elem : goods)
             elem.stream()
                     .filter(onlySinks)
@@ -26,7 +26,7 @@ public class Hypermarket{
 
         System.out.println();
 
-        Comparator<Sink> comparator = Comparator.comparing(Plumbing::getManufacturer);
+        Comparator<Category> comparator = Comparator.comparing(Category::getPrice);
 
         for (List<? extends Category> elem : goods)
             elem.stream()
