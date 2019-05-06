@@ -1,3 +1,5 @@
+package com.vtom.stonemarket;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -26,10 +28,8 @@ public class StoneGenerator {
     }
 
     public void create() {
-        for (int i = 0; i < presiousStones.length; i++) {
+        for (int i = 0; i < 10; i++) {
             stone.add(new PresiousStone(generateName(presiousStones), generateWeight(), generateWeight(), generateClarity(), StoneValue.Precious));
-        }
-        for (int i = 0; i < presiousStones.length; i++) {
             stone.add(new SemiPresiousStone(generateName(semiPresiousStones), generateWeight(), generateWeight(), generateClarity(), StoneValue.SemiPresious));
         }
     }
@@ -44,8 +44,8 @@ public class StoneGenerator {
         return name[RANDOM.nextInt(name.length)];
     }
 
-//    public StoneValue generateValue() {
-//        StoneValue[] VALUES = StoneValue.values();
+//    public com.vtom.stonemarket.StoneValue generateValue() {
+//        com.vtom.stonemarket.StoneValue[] VALUES = com.vtom.stonemarket.StoneValue.values();
 //        return VALUES[RANDOM.nextInt(VALUES.length)];
 //    }
 

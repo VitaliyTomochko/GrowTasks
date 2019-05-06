@@ -1,7 +1,6 @@
 package com.vtom.view.menu;
 
 
-import com.vtom.ElectricDevice;
 import com.vtom.view.gameroom.Main;
 import com.vtom.view.hypermarket.Hypermarket;
 
@@ -19,8 +18,9 @@ public class ViewList {
 
         views.put("Gameroom", Main::main);
         views.put("Hypermarket", Hypermarket::main);
-        views.put("StoneMarket", Hypermarket::main);
-        views.put("ElectricalAppliances", Hypermarket::main);
+        views.put("StoneMarket", com.vtom.stonemarket.Main::main);
+        views.put("ElectricalAppliances", com.vtom.aircompany.Main::main);
+        views.put("AirCompany", com.vtom.aircompany.Main::main);
     }
 
 

@@ -13,6 +13,17 @@ public class ToyController implements IToy {
 
     @Override
     public void searchByType(String str) {
+        List<Toy> kinds=new ArrayList<>();
+
+        for(Toy elem:toys){
+            if(elem.getToyType().name().equalsIgnoreCase(str)){
+
+                kinds.add(elem);
+            }
+
+        }
+
+        System.out.println(new Menu(kinds).printResult());
 
     }
 
@@ -21,7 +32,7 @@ public class ToyController implements IToy {
         List<Toy> kinds=new ArrayList<>();
 
         for(Toy elem:toys){
-            if(elem.getToyKind().name().equals(str)){
+            if(elem.getToyKind().name().equalsIgnoreCase(str)){
 
                kinds.add(elem);
             }
@@ -38,7 +49,7 @@ public class ToyController implements IToy {
         List<Toy> kinds=new ArrayList<>();
 
         for(Toy elem:toys){
-            if(elem.getSize().name().equals(str)){
+            if(elem.getSize().name().equalsIgnoreCase(str)){
 
                 kinds.add(elem);
             }

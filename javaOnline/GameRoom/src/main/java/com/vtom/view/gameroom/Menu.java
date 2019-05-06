@@ -20,10 +20,10 @@ public class Menu  {
 
         System.out.println("1 Show toys ");
         System.out.println("2 Sort by price ");
-        System.out.println("3 Find toys by size ");
-        System.out.println("4 Find toys by type ");
+        System.out.println("3 Find toys by type ");
         System.out.println("4 Find toys by kind ");
-        System.out.println("5 Exit ");
+        System.out.println("5 Find toys by size ");
+        System.out.println("6 Exit ");
 
     }
 

@@ -26,7 +26,7 @@ public class Main {
             moneyAmount -= tg.getToy().getPrice();
 
         }
-
+        boolean exit = true;
         System.out.println("Choose action");
         do {
             menu = new Menu(toys);
@@ -37,10 +37,11 @@ public class Main {
                     System.out.println(menu.printResult());
                     break;
                 case 2:
-                    break;
-                case 3:
                     tc.sortByPrice();
                     System.out.println(menu.printResult());
+                    break;
+                case 3:
+                    tc.searchByType(scanner.nextLine());
                     break;
                 case 4:
                     tc.searchByKind(scanner.nextLine());
@@ -49,13 +50,13 @@ public class Main {
                     tc.searchBySize(scanner.nextLine());
                     break;
                 case 6:
-                    System.exit(0);
+                    exit=false;
                     break;
                 default:
-                    System.out.println("Wrong number");
+                    System.out.println("");
             }
 
-        } while (true);
+        } while (exit);
 
 
         // System.out.println(toys.toString());

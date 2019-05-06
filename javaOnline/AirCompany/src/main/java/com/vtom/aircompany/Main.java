@@ -1,4 +1,4 @@
-package com.vtom;
+package com.vtom.aircompany;
 
 import java.util.Scanner;
 

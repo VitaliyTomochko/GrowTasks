@@ -1,4 +1,4 @@
-package com.vtom;
+package com.vtom.aircompany;
 
 import de.vandermeer.asciitable.AsciiTable;
 import de.vandermeer.asciithemes.a7.A7_Grids;

@@ -82,11 +82,12 @@ public class ElectricDeviceManager {
     }
 
     public void plugIn(String deviceName) {
-        System.out.println(menu.printResult(Stream.of(kitchenDevices.stream()
+        Stream.of(kitchenDevices.stream()
                 , livingRoomDevices.stream()
                 , officeDevices.stream())
                 .flatMap(s -> s)
                 .filter(name -> name.getName().equalsIgnoreCase(deviceName))
-                .collect(Collectors.toList())));
+                .forEach(ElectricDevice::connectToNetwork);
+        System.out.println("Success");
     }
 }

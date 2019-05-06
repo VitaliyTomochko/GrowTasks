@@ -1,3 +1,5 @@
+package com.vtom.stonemarket;
+
 class Stone {
 
     private String name;
@@ -21,7 +23,7 @@ class Stone {
 
     @Override
     public String toString() {
-        return "Stone{" +
+        return "com.vtom.stonemarket.Stone{" +
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 ", price=" + price +
